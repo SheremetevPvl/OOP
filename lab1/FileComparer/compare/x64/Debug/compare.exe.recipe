@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\OOP\lab1\FileComparer\x64\Debug\compare.exe</FullPath>
+      <FullPath>D:\OopLabs\OOP\lab1\FileComparer\x64\Debug\compare.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

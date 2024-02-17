@@ -1,2 +1,10 @@
-﻿  compare.vcxproj -> D:\OOP\lab1\FileComparer\x64\Debug\compare.exe
-  1
+﻿  FileComparer.cpp
+  compare.vcxproj -> D:\OopLabs\OOP\lab1\FileComparer\x64\Debug\compare.exe
+  Files are equal
+  Test 1 passed
+  Files are equal
+  Test 2 passed
+  Files are different. Line number is 1
+  Test failed
+D:\VS\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(161,5): error MSB3073: выход из команды ""D:\OopLabs\OOP\lab1\FileComparer\compare\Tests.bat" "D:\OopLabs\OOP\lab1\FileComparer\x64\Debug\compare.exe"
+D:\VS\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(161,5): error MSB3073: :VCEnd" с кодом 1.

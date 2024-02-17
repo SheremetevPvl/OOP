@@ -1,3 +1,3 @@
 #pragma once
 
-int FileCompare(const std::ifstream& file1, const std::ifstream& file2);
+int FileCompare(std::ifstream& file1, std::ifstream& file2);

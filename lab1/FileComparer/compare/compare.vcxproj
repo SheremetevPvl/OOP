@@ -155,7 +155,10 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Empty.txt" />
+    <Text Include="FirstDiffFile.txt" />
     <Text Include="firstFile.txt" />
+    <Text Include="firstFilePlusOneStr.txt" />
+    <Text Include="SecondDiffFile.txt" />
     <Text Include="secondFile.txt" />
   </ItemGroup>
   <ItemGroup>

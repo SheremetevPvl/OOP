@@ -11,8 +11,8 @@ compare.exe <file1> <file2>
 #include <optional>
 #include "Compare.h"
 
-const std::string ErrorCountArgsMsg = "Invalid arguments count";
-const std::string RightUsageMsg = "Usage: compare.exe <file1> < file2>";
+const std::string ERROR_COUNT_ARGS_MSG = "Invalid arguments count";
+const std::string RIGHT_USAGE_MSG = "Usage: compare.exe <file1> <file2>";
 
 struct Args
 {
@@ -24,8 +24,8 @@ std::optional<Args> ParseArgs(int argc, char* argv[])
 {
     if (argc != 3)
     {
-        std::cout << ErrorCountArgsMsg << std::endl;
-        std::cout << RightUsageMsg << std::endl;
+        std::cout << ERROR_COUNT_ARGS_MSG << std::endl;
+        std::cout << RIGHT_USAGE_MSG << std::endl;
         return std::nullopt;
     }
     Args args;
@@ -41,16 +41,11 @@ int main(int argc, char* argv[])
     {
         return 1;
     }
-    else 
-    {
-        std::ifstream firstFile;
-        firstFile.open(args->firstInputFileName);
-        std::ifstream secondFile;
-        secondFile.open(args->secondInputFileName);
-        std::cout << FileCompare(firstFile, secondFile);
-    }
-
-    return 0;
+    std::ifstream firstFile;
+    firstFile.open(args->firstInputFileName);
+    std::ifstream secondFile;
+    secondFile.open(args->secondInputFileName);
+    return FileCompare(firstFile, secondFile);
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

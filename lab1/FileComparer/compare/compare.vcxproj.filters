@@ -31,6 +31,9 @@
     <Text Include="firstFile.txt" />
     <Text Include="secondFile.txt" />
     <Text Include="Empty.txt" />
+    <Text Include="FirstDiffFile.txt" />
+    <Text Include="SecondDiffFile.txt" />
+    <Text Include="firstFilePlusOneStr.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Tests.bat">
