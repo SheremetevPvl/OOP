@@ -1,0 +1,2 @@
+This is file have one string to find
+This is second string

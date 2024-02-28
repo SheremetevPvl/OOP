@@ -1,2 +1,16 @@
 ﻿  flipbyte.cpp
   flipbyte.vcxproj -> D:\OOP\lab1\flipbyte\x64\Debug\flipbyte.exe
+  Invalid arguments count
+  Usage: flipbyte.exe <0-255>
+  Test 1 succes
+  96
+  Test 2 succes
+  Number from input is not eight-bit number
+  Test 3 succes
+  Input is not a number
+  Test 4 succes
+  Number from input is not eight-bit number
+  Test 5 succes
+  Input is not a natural number
+  Test 6 succes
+  All tests passed succesfuly

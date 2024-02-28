@@ -1,9 +1,30 @@
 ﻿#include <iostream>
 #include <string>
+#include <optional>
 
 const std::string NOT_NUM_MSG = "Input is not a number";
-const std::string NOT_POS_NUM_MSG = "Input is not a pos number";
+const std::string NOT_POS_NUM_MSG = "Input is not a natural number";
 const std::string NOT_EIGHT_BIT_MSG = "Number from input is not eight-bit number";
+const std::string ERROR_COUNT_ARGS_MSG = "Invalid arguments count";
+const std::string RIGHT_USAGE_MSG = "Usage: flipbyte.exe <0-255>";
+
+struct Args
+{
+    std::string numToFlip;
+};
+
+std::optional<Args> ParseArgs(int argc, char* argv[])
+{
+    if (argc != 2)
+    {
+        std::cout << ERROR_COUNT_ARGS_MSG << std::endl;
+        std::cout << RIGHT_USAGE_MSG << std::endl;
+        return std::nullopt;
+    }
+    Args args;
+    args.numToFlip = argv[1];
+    return args;
+}
 
 bool IsDecimalNumber(std::string inputStr)
 {
@@ -44,23 +65,23 @@ int FlippedDecNum(int num)
     int flippedNum = 0;
     for (int bitIndex = 0; bitIndex < 8; bitIndex++)
     {
-        if ((num & (1 << bitIndex)) == 0)
-        {
-            flippedNum |= (1 << (7 - bitIndex));
-        }
+        flippedNum |= ((num >> bitIndex) & 1) << (7 - bitIndex);  //сдвигаем исходный байт вправо на i позиций, затем извлекаем младший бит и устанавливаем его в отзеркаленном байте на позицию 7 - i.
     }
     return flippedNum;
 }
 
-int main()
+int main(int argc, char* argv[])
 {
-    std::string input;
-    std::cin >> input;
-    if (!IsDecimalNumber(input))
+    auto args = ParseArgs(argc, argv);
+    if (!args)
     {
         return 1;
     }
-    int inputNum = std::stoi(input);
+    if (!IsDecimalNumber(args->numToFlip))
+    {
+        return 1;
+    }
+    int inputNum = std::stoi(args->numToFlip);
     if (!IsEightBitNum(inputNum))
     {
         return 1;

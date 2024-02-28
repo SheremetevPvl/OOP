@@ -1,0 +1,17 @@
+﻿  findtext.cpp
+  findtext.vcxproj -> D:\OOP\lab1\findtext\x64\Debug\findtext.exe
+  Fail to open file
+  Test 1 passed
+  Text not found
+  Test 2 passed
+  1
+  Test 3 passed
+  Text not found
+  Test 4 passed
+  2
+  Test 5 passed
+  Text not found
+  Test 6 passed
+  Text not found
+  Test 7 passed
+  All tests passed succesfuly
