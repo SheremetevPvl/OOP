@@ -1,1 +1,2 @@
 D:\OOP\lab1\flipbyte\x64\Debug\flipbyte.exe
+D:\OopLabs\OOP\lab1\flipbyte\x64\Debug\flipbyte.exe

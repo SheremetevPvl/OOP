@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿//строка не по значению, функции в консоль сообщения не выводят(лучше try catch), bat-ник должен сравнивать с файлами
+#include <iostream>
 #include <string>
 #include <optional>
 
@@ -60,13 +61,13 @@ bool IsEightBitNum(int num)
     } 
 }
 
-int FlippedDecNum(int num)
+int FlippedByteNum(int num)
 {
     int flippedNum = 0;
     for (int bitIndex = 0; bitIndex < 8; bitIndex++)
     {
-        flippedNum |= ((num >> bitIndex) & 1) << (7 - bitIndex);  //сдвигаем исходный байт вправо на i позиций, затем извлекаем младший бит и устанавливаем его в отзеркаленном байте на позицию 7 - i.
-    }
+        flippedNum |= ((num >> bitIndex) & 1) << (7 - bitIndex);  //сдвигаем исходный байт вправо на i позиций, затем извлекаем младший бит
+    }                                                             //и устанавливаем его в отзеркаленном байте на позицию 7 - i.
     return flippedNum;
 }
 
@@ -86,6 +87,6 @@ int main(int argc, char* argv[])
     {
         return 1;
     }
-    std::cout << FlippedDecNum(inputNum) << std::endl;
+    std::cout << FlippedByteNum(inputNum) << std::endl;
     return 0;
 }
